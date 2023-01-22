@@ -1,0 +1,65 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 fw-bold text-danger">Edit Contact</p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id nesciunt voluptas consectetur
+        iste tempora, odio eveniet rem ea non temporibus voluptates, dolores ipsum. Earum fuga iure id commodi nostrum
+        dolorem.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Esit contact form -->
+<div class="container ">
+  <div class="row">
+    <div class="col-sm-4">
+
+      <form (submit)="updateSubmit()">
+
+        <div class="mb-3">
+          <input type="text" placeholder="Name" class="form-control" [(ngModel)]="contact.name" name="name"
+            [value]="contact.name">
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="Photo url" class="form-control" [(ngModel)]="contact.photo" name="photo">
+        </div>
+        <div class="mb-3">
+          <input type="email" placeholder="Email" class="form-control" [(ngModel)]="contact.email" name="email">
+        </div>
+        <div class="mb-3">
+          <input type="number" placeholder="Mobile" class="form-control" [(ngModel)]="contact.mobile" name="mobile">
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="Company" class="form-control" [(ngModel)]="contact.company" name="company">
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="Title" class="form-control" [(ngModel)]="contact.title" name="title">
+        </div>
+
+        <div class="mb-3">
+
+          <select class="form-control" [(ngModel)]="contact.groupId" name="groupId">
+            <option>Select a Group</option>
+            <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <input type="submit" class="btn btn-danger" value="Update">
+          <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="col-sm-4">
+      <img [src]="contact.photo" alt="" class="contact-img">
+
+    </div>
+  </div>
+</div>
+
+
+<!-- <pre>{{contactId | json}}</pre>
+<pre>{{contact | json}}</pre> -->

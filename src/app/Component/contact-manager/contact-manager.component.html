@@ -1,0 +1,93 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+
+      <p class="h3 text-danger fw-bold">NG Contact
+        <a class="btn btn-danger btn-sm" routerLink="/contacts/add">
+          <i class="fa fa-plus-circle"> </i> New </a>
+
+      </p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed adipisci aliquam voluptas
+        blanditiis eaque possimus
+        deserunt quisquam rem tenetur nobis perferendis culpa molestiae libero assumenda in impedit, nostrum recusandae!
+        Deserunt ullam veniam natus perferendis ut laborum minus quae molestiae exercitationem!</p>
+
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Search user" />
+              </div>
+
+              <div class="col">
+                <input type="submit" value="Search" class="btn btn-outline-dark" width="15x" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- <pre>{{contacts | json}}</pre> -->
+
+<!-- loading spinner -->
+
+<div *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- error message -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="container mt-3" *ngIf="!loading && contacts.length>0">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let contact of contacts">
+      <div class="card list-group-item-danger shadow-lg my-2">
+        <div class="card-body">
+
+          <div class="row align-items-center">
+
+            <div class="col-sm-4">
+              <img alt="" [src]="contact.photo" class="contact-img">
+
+            </div>
+
+            <div class="col-sm-7">
+              <ul class="list-group">
+                <li class="list-group-item">Name: <span class="fw-bold">{{contact.name}}</span></li>
+                <li class="list-group-item">Email: <span class="fw-bold">{{contact.email}}</span></li>
+                <li class="list-group-item">Mobile: <span class="fw-bold">{{contact.mobile}}</span></li>
+              </ul>
+
+            </div>
+
+            <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+              <a class="btn btn-warning my-1" routerLink="/contacts/view/{{contact.id}}"> <i class="fa fa-eye"></i></a>
+              <a class="btn btn-primary my-1" routerLink="/contacts/edit/{{contact.id}}"> <i class="fa fa-pen"></i></a>
+              <button class="btn btn-danger my-1"><i class="fa fa-trash-alt"
+                  (click)="deletecontact(contact.id)"></i></button>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+{
+  "contacts": [
+    {
+      "id": "K5450o",
+      "name": "MAhadev",
+      "email": "ravi@yahoo.com",
+      "photo": "https://w7.pngwing.com/pngs/519/408/png-transparent-mahadeva-ganesha-meditation-drawing-maha-shivaratri-ganesha-fictional-character-om-desktop-wallpaper.png",
+      "mobile": "363485472",
+      "company": "google",
+      "title": "Developer",
+      "groupId": "3"
+    },
+    {
+      "name": "Ganesh",
+      "photo": "https://e7.pngegg.com/pngimages/120/469/png-clipart-ganesha-shiva-om-symbol-hinduism-ganpati-logo-monochrome.png",
+      "email": "ganesh@gmail.com",
+      "mobile": 8745425545,
+      "company": "God",
+      "title": "To make always happy other",
+      "id": "7f8MbOE",
+      "groupId": "6"
+    },
+    {
+      "name": "Akashta",
+      "email": "akashta@yahoo.com",
+      "mobile": 9380352776,
+      "company": "Virtusa",
+      "photo": "https://www.hdwallpaper.nu/wp-content/uploads/2015/07/beautiful_Wallpaper_025.jpg",
+      "title": "Developer",
+      "groupId": "2",
+      "id": "peIHl8w"
+    },
+    {
+      "name": "Ram Nageena",
+      "email": "ramnageena@virtusa.com",
+      "mobile": 9149655413,
+      "company": "Virtusa",
+      "photo": "https://th.bing.com/th/id/OIP.ancq6cfOA85lvcWpelmSMQAAAA?pid=ImgDet&w=139&h=180&rs=1",
+      "title": "Developer",
+      "groupId": "5",
+      "id": "8ObY3Kh"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Colleague"
+    },
+    {
+      "id": "2",
+      "name": "Friends"
+    },
+    {
+      "id": "3",
+      "name": "Family"
+    },
+    {
+      "id": "4",
+      "name": "Brothers"
+    },
+    {
+      "id": "5",
+      "name": "Service"
+    },
+    {
+      "id": "6",
+      "name": "Socail"
+    }
+  ]
+}
